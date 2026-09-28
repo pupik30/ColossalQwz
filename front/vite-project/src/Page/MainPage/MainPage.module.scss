@@ -3,6 +3,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .SectionBase{
     height: auto;
@@ -107,22 +108,21 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #0B0B0E; // Темный фон всей секции
 
-    // Сетка карточек
+
     .CardsGrid {
         display: flex;
         justify-content: center;
         gap: 30px;
-        width: 100%;
-        max-width: 1200px;
-        margin-bottom: 80px; // Отступ до логотипов
+        width: 60%;
+   
+        margin-bottom: 80px; 
     }
 
-    // Стиль одной карточки
+
     .Card {
         flex: 1;
-        background: rgb(255 255 255 / 3%); // Очень слабый белый фон
+        background: rgb(255 255 255 / 3%); 
         border: 1px solid rgb(255 255 255 / 5%);
         border-radius: 6px;
         padding: 40px 30px;
@@ -150,20 +150,19 @@ main{
         }
 
         .CardText {
-            color: rgb(255 255 255 / 40%); // Серый приглушенный текст
+            color: rgb(255 255 255 / 40%); 
             font-size: 15px;
             line-height: 1.6;
             margin: 0;
         }
     }
 
-    // Блок брендов с верхней и нижней линией
     .BrandsContainer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 100%;
-        max-width: 1100px;
+        width: 60%;
+
         padding: 40px 0;
         border-top: 1px solid rgb(255 255 255 / 10%);
         border-bottom: 1px solid rgb(255 255 255 / 10%);
@@ -173,7 +172,7 @@ main{
             font-size: 24px;
             font-weight: 700;
             letter-spacing: -0.5px;
-            // Здесь можно заменить на стили для картинок, если будут svg логотипы
+
         }
     }
 }

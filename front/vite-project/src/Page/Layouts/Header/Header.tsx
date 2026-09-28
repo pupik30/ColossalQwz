@@ -8,16 +8,7 @@ import { NavLink } from 'react-router-dom';
 import { Photo } from "../../../file.ts";
 
 export default function Header(): React.JSX.Element {
-<<<<<<< HEAD
-return (
-<>
-<section className={styles.SectionBase}>
-asdasd
-</section>
-</>
-);
-}
-=======
+
     return(
 <>
 <header>
@@ -42,4 +33,4 @@ asdasd
 </>
 )
 }
->>>>>>> 85f8279 (Добавил файлы проекта)
+

@@ -1,24 +1,12 @@
 import React from "react";
 import { useState } from "react";
-<<<<<<< HEAD
-import styles from './NewsPage.module.scss';
-=======
 import styles from './MainPage.module.scss';
->>>>>>> 85f8279 (Добавил файлы проекта)
 import { NavLink } from 'react-router-dom';
 
 // @ts-ignore — добавьте эту строку, если TypeScript ругается на отсутствие типов для file.js
 
-<<<<<<< HEAD
-import { Photo } from "../../../file.js";
 
-export default function Newspage(): React.JSX.Element {
-return (
-<>
-<section className={styles.SectionBase}>
-asdasd
-</section>
-=======
+
 import { Photo } from "../../file.ts";
 
 export default function MainPage(): React.JSX.Element {
@@ -72,7 +60,6 @@ return (
 </section>
 </main>
 
->>>>>>> 85f8279 (Добавил файлы проекта)
 </>
 );
 }
