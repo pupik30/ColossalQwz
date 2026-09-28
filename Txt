@@ -5,6 +5,10 @@ https://www.figma.com/design/QWuz95CyoCjBo8wHbJ0QYf/%25D0%259C%25D0%25BD%25D0%25
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 85f8279 (Добавил файлы проекта)
 npm install react-router-dom
 npm i
 npm install -D sass-embedded
