@@ -1,0 +1,146 @@
+@use '../../../Styles/mixin' as *;
+@use '../../../Styles/variables' as *;
+
+.wrapper {
+    @include flex-column-center;
+    gap: 3rem;
+    width: 100%;
+    padding: 10rem 0;
+
+    .label {
+        font-size: $fs-14;
+        font-weight: $fw-semibold;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: $green;
+        text-align: center;
+    }
+
+    .title {
+        max-width: 60rem;
+        font-size: $fs-32;
+        font-weight: $fw-bold;
+        line-height: 1.25;
+        color: $white;
+        text-align: center;
+    }
+
+    .divider {
+        width: 100%;
+        max-width: 110rem;
+        margin: 3rem auto 0;
+        padding: 0 4rem;
+        height: 1px;
+        background: rgb(255 255 255 / 8%);
+    }
+
+    .inner {
+        display: grid;
+        grid-template-columns: 24rem 1fr;
+        gap: 6rem;
+        width: 100%;
+        max-width: 110rem;
+        margin: 0 auto;
+        padding: 0 4rem;
+
+        @media (max-width: 800px) {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+    }
+
+    .sidebar {
+        @include flex-column;
+        align-items: flex-start;
+        gap: 0.4rem;
+        align-self: flex-start;
+        width: 100%;
+        padding: 1.6rem;
+        background: rgb(255 255 255 / 3%);
+        border-radius: 1rem;
+
+        .category {
+            width: 100%;
+            padding: 1.2rem 1.6rem;
+            font-size: $fs-14;
+            font-weight: $fw-regular;
+            color: $white60;
+            text-align: left;
+            background: transparent;
+            border: none;
+            border-radius: 0.6rem;
+            cursor: pointer;
+
+            &:hover {
+                color: $white;
+            }
+
+            &.categoryActive {
+                color: $white;
+                font-weight: $fw-semibold;
+                background: rgb(255 255 255 / 6%);
+            }
+        }
+    }
+
+    .list {
+        @include flex-column;
+        gap: 0;
+
+        .item {
+            border-bottom: 1px solid rgb(255 255 255 / 8%);
+
+            &:first-child {
+                border-top: 1px solid rgb(255 255 255 / 8%);
+            }
+
+            .question {
+                @include flex-center-between;
+                gap: 2rem;
+                width: 100%;
+                padding: 2rem 0;
+                font-size: $fs-16;
+                font-weight: $fw-semibold;
+                color: $white;
+                text-align: left;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+
+                .chevron {
+                    flex-shrink: 0;
+                    color: $white60;
+                }
+            }
+
+            .answerWrap {
+                display: grid;
+                grid-template-rows: 0fr;
+
+                .answerInner {
+                    min-height: 0;
+                    overflow: hidden;
+                }
+
+                .answer {
+                    margin: 0;
+                    padding-bottom: 2rem;
+                    font-size: $fs-14;
+                    line-height: 1.7;
+                    color: $white60;
+                }
+            }
+
+            &.itemOpen {
+                .question .chevron {
+                    transform: rotate(180deg);
+                    color: $white;
+                }
+
+                .answerWrap {
+                    grid-template-rows: 1fr;
+                }
+            }
+        }
+    }
+}

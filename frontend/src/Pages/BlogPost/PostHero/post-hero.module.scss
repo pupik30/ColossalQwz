@@ -1,0 +1,51 @@
+@use '../../../Styles/mixin' as *;
+@use '../../../Styles/variables' as *;
+
+.hero {
+    @include flex-column-center;
+    gap: 6rem;
+    width: 100%;
+
+    .head {
+        @include flex-column-center;
+        gap: 1.6rem;
+        text-align: center;
+
+        .label {
+            font-size: $fs-14;
+            font-weight: $fw-semibold;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: $green;
+        }
+
+        .title {
+            max-width: 60rem;
+            margin: 0;
+            font-size: $fs-40;
+            font-weight: $fw-bold;
+            line-height: 1.2;
+            color: $white;
+        }
+
+        .meta {
+            font-size: $fs-14;
+            color: $white60;
+        }
+    }
+
+    .coverWrap {
+        width: 100%;
+        max-width: 1024px;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        border-radius: 0.8rem;
+
+        .cover {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

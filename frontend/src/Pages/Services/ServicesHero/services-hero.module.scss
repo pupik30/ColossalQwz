@@ -1,0 +1,27 @@
+@use '../../../Styles/mixin' as *;
+@use '../../../Styles/variables' as *;
+
+.servicesHero {
+    @include flex-column-center;
+    gap: 1.6rem;
+    width: 100%;
+    max-width: 110rem;
+    padding-bottom: 8rem;
+    border-bottom: 1px solid rgb(255 255 255 / 8%);
+
+    .eyebrow {
+        font-size: $fs-18;
+        font-weight: $fw-semibold;
+        color: $green;
+    }
+
+    .title {
+        max-width: 60rem;
+        margin: 0;
+        font-size: $fs-32;
+        font-weight: $fw-bold;
+        line-height: 1.25;
+        color: $white;
+        text-align: center;
+    }
+}

@@ -1,0 +1,17 @@
+@use '../../Styles/mixin' as *;
+@use '../../Styles/variables' as *;
+
+.page {
+    @include flex-column-center;
+    gap: 12rem;
+    width: 100%;
+    max-width: 1808px;
+    margin: 0 auto;
+    padding: 10rem 4rem;
+
+    .blocks {
+        @include flex-column;
+        gap: 12rem;
+        width: 100%;
+    }
+}

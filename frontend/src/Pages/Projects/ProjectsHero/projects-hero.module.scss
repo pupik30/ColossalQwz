@@ -1,0 +1,64 @@
+@use '../../../Styles/mixin' as *;
+@use '../../../Styles/variables' as *;
+
+.hero {
+    @include flex-column;
+    gap: 6rem;
+    width: 100%;
+
+    .inner {
+        @include flex-center-between;
+        align-items: flex-end;
+        gap: 6rem;
+    }
+
+    .head {
+        @include flex-column;
+        gap: 1.6rem;
+    }
+
+    .label {
+        font-size: $fs-14;
+        font-weight: $fw-semibold;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: $green;
+    }
+
+    .title {
+        max-width: 60rem;
+        margin: 0;
+        font-size: $fs-40;
+        font-weight: $fw-bold;
+        line-height: 1.25;
+        color: $white;
+    }
+
+    .filter {
+        flex-shrink: 0;
+    }
+
+    .select {
+        min-width: 16rem;
+        padding: 1.2rem 1.6rem;
+        font-family: inherit;
+        font-size: $fs-14;
+        color: $white;
+        background: $btnCard;
+        border: 1px solid rgb(255 255 255 / 8%);
+        border-radius: 0.4rem;
+        cursor: pointer;
+        outline: none;
+
+        option {
+            background: $cardDark;
+            color: $white;
+        }
+    }
+
+    .divider {
+        width: 100%;
+        height: 1px;
+        background: rgb(255 255 255 / 8%);
+    }
+}

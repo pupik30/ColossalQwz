@@ -1,0 +1,23 @@
+@use '../../Styles/mixin' as *;
+@use '../../Styles/variables' as *;
+
+.detail {
+    @include flex-column-center;
+    gap: 8rem;
+    width: 100%;
+    max-width: 1808px;
+    margin: 0 auto;
+    padding: 10rem 4rem;
+}
+
+.state {
+    padding: 10rem;
+    font-size: $fs-16;
+    color: $white60;
+    text-align: center;
+
+    a {
+        color: $purple;
+        text-decoration: underline;
+    }
+}

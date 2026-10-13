@@ -1,0 +1,36 @@
+@use '../../../Styles/mixin' as *;
+@use '../../../Styles/variables' as *;
+
+.howWeWork {
+    width: 100%;
+    max-width: $max-width;
+    @include flex-center-between;
+
+    img {
+        width: 601px;
+        height: 525px;
+    }
+
+    .infoWork {
+        @include flex-column;
+        gap: 2rem;
+
+        .eyebrown {
+            color: $green;
+            font-size: $fs-16;
+            font-weight: $fw-semibold;
+        }
+
+        .title {
+            font-size: $fs-30;
+            font-weight: $fw-bold;
+        }
+
+        .description {
+            font-size: $fs-16;
+            font-weight: $fw-medium;
+            color: $white60;
+            line-height: 1.8;
+        }
+    }
+}

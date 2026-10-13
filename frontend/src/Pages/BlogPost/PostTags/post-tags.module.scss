@@ -1,0 +1,17 @@
+@use '../../../Styles/mixin' as *;
+@use '../../../Styles/variables' as *;
+
+.tags {
+    @include flex-center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+
+    .tag {
+        padding: 0.8rem 1.6rem;
+        font-size: $fs-14;
+        color: $white80;
+        background: $btnCard;
+        border: 1px solid rgb(255 255 255 / 8%);
+        border-radius: 2rem;
+    }
+}

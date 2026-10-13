@@ -1,0 +1,91 @@
+@use '../../../Styles/mixin' as *;
+@use '../../../Styles/variables' as *;
+
+.cardInner {
+    @include flex-column;
+    gap: 2.4rem;
+    width: 100%;
+
+    .card {
+        @include flex-column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        min-height: 320px;
+        padding-top: 3rem;
+        background: $cardDark;
+        border: 1px solid $btnLight;
+        border-radius: 3px;
+        overflow: hidden;
+
+        .skeletons {
+            @include flex-column-center;
+            gap: 1.2rem;
+            width: 100%;
+
+            .skeletonLong,
+            .skeletonShort {
+                height: 1.8rem;
+                background: $skeleton;
+                border-radius: 100px;
+            }
+
+            .skeletonLong {
+                width: 55%;
+            }
+
+            .skeletonShort {
+                width: 30%;
+            }
+        }
+
+        .mobileSkeleton,
+        .tabletSkeleton,
+        .tableSkeleton {
+            align-self: center;
+            margin-bottom: -1px;
+            background: $skeleton;
+            border-radius: 38px 38px 0 0;
+        }
+
+        .mobileSkeleton {
+            width: 42%;
+            height: 180px;
+        }
+
+        .tabletSkeleton {
+            width: 60%;
+            height: 160px;
+        }
+
+        .tableSkeleton {
+            width: 82%;
+            height: 140px;
+        }
+    }
+
+    .detail {
+        @include flex-column-center;
+        gap: 2rem;
+        width: 100%;
+
+        .detailText {
+            @include flex-column-center;
+            gap: 0.8rem;
+            text-align: center;
+            color: $white;
+
+            .heading {
+                margin: 0;
+                font-size: $fs-16;
+                font-weight: $fw-bold;
+            }
+
+            .text {
+                margin: 0;
+                font-size: $fs-14;
+                color: $white60;
+            }
+        }
+    }
+}

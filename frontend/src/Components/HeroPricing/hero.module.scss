@@ -1,0 +1,35 @@
+@use '../../Styles/mixin' as *;
+@use '../../Styles/variables' as *;
+
+.wrapper {
+    @include flex-column-center;
+    gap: 1.6rem;
+    width: 100%;
+    padding: 10rem 4rem 0;
+
+    .label {
+        font-size: $fs-14;
+        font-weight: $fw-semibold;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: $green;
+        text-align: center;
+    }
+
+    .title {
+        max-width: 60rem;
+        font-size: $fs-32;
+        font-weight: $fw-bold;
+        line-height: 1.25;
+        color: $white;
+        text-align: center;
+    }
+
+    .divider {
+        width: 100%;
+        max-width: 110rem;
+        margin-top: 6rem;
+        height: 1px;
+        background: rgb(255 255 255 / 8%);
+    }
+}

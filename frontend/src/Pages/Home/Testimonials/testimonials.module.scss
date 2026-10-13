@@ -1,0 +1,121 @@
+@use '../../../Styles/mixin' as *;
+@use '../../../Styles/variables' as *;
+
+.wrapper {
+    @include flex-column-center;
+    gap: 6rem;
+    width: 100%;
+    max-width: 1780px;
+    padding: 10rem 0;
+
+    .header {
+        @include flex-column-center;
+        gap: 1.6rem;
+        text-align: center;
+
+        .label {
+            font-size: $fs-14;
+            font-weight: $fw-semibold;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: $green;
+        }
+
+        .title {
+            max-width: 60rem;
+            font-size: $fs-40;
+            font-weight: $fw-bold;
+            line-height: 1.2;
+            color: $white;
+        }
+    }
+
+    .viewport {
+        width: 100%;
+        padding: 0 4rem;
+        overflow: hidden;
+    }
+
+    .track {
+        display: flex;
+        align-items: stretch;
+        gap: 3.2rem;
+        width: 100%;
+
+        > * {
+            flex: 0 0 calc((100% - 6.4rem) / 3);
+        }
+    }
+
+    .card {
+        @include flex-column-center;
+        gap: 0.8rem;
+        min-height: 44.7rem;
+        padding: 5.6rem 4rem;
+        background: $btnCard;
+        border: 1px solid transparent;
+        border-radius: 1.6rem;
+        text-align: center;
+
+        &.cardActive {
+            border-color: $purple;
+            background: rgb(96 22 252 / 5%);
+            box-shadow: 0 0 4rem rgb(96 22 252 / 25%);
+            transform: scale(1.04);
+        }
+
+        .avatarWrap {
+            position: relative;
+            margin-bottom: 2.4rem;
+
+            .avatar {
+                width: 8rem;
+                height: 8rem;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+
+        .name {
+            font-size: $fs-20;
+            font-weight: $fw-bold;
+            color: $white;
+        }
+
+        .company {
+            margin-bottom: 2.4rem;
+            font-size: $fs-14;
+            color: $white60;
+        }
+
+        .text {
+            font-size: $fs-16;
+            line-height: 1.65;
+            color: $white80;
+        }
+    }
+
+    .dots {
+        @include flex-center;
+        gap: 1.2rem;
+
+        .dot {
+            width: 1rem;
+            height: 1rem;
+            border: none;
+            border-radius: 50%;
+            background: $white60;
+            cursor: pointer;
+
+            &.dotActive {
+                background: $white;
+            }
+        }
+    }
+
+    .loader {
+        padding: 4rem;
+        color: $white;
+        text-align: center;
+    }
+}

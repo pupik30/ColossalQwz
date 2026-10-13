@@ -1,0 +1,49 @@
+@use '../../Styles/mixin' as *;
+@use '../../Styles/variables' as *;
+
+.header {
+    width: 100%;
+    @include flex-center;
+    padding: 6rem 0;
+
+    .container {
+        width: 100%;
+        max-width: 1506px;
+        @include flex-center-between;
+
+        .logo {
+            @include flex-center;
+
+            a {
+                display: flex;
+                gap: 1rem;
+
+                img {
+                    width: 23px;
+                    height: auto;
+                }
+
+                .logoText {
+                    font-size: $fs-26;
+                    font-weight: $fw-bold;
+                    font-style: $DM;
+                    color: $white;
+                }
+            }
+        }
+
+        .navigation {
+            width: 40%;
+            @include flex-center-between;
+
+            a {
+                color: $white80;
+                font-size: $fs-20;
+            }
+
+            a:hover {
+                color: $white;
+            }
+        }
+    }
+}

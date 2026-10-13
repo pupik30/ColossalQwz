@@ -1,0 +1,11 @@
+@use '../../Styles/mixin' as *;
+@use '../../Styles/variables' as *;
+
+.about {
+    @include flex-column-center;
+    gap: 10rem;
+    width: 100%;
+    max-width: 1808px;
+    margin: 0 auto;
+    padding: 10rem 4rem;
+}

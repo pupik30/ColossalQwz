@@ -1,0 +1,70 @@
+@use '../../../Styles/mixin' as *;
+@use '../../../Styles/variables' as *;
+
+.intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+    align-items: center;
+    width: 100%;
+
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .images {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+
+        .imageTop,
+        .imageBottom {
+            position: absolute;
+            border-radius: 0.8rem;
+            object-fit: cover;
+        }
+
+        .imageTop {
+            top: 0;
+            left: 0;
+            width: 70%;
+            height: 75%;
+        }
+
+        .imageBottom {
+            bottom: 0;
+            right: 0;
+            width: 70%;
+            height: 75%;
+        }
+    }
+
+    .content {
+        @include flex-column;
+        gap: 2rem;
+
+        .label {
+            font-size: $fs-14;
+            font-weight: $fw-semibold;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: $green;
+        }
+
+        .title {
+            margin: 0;
+            font-size: $fs-32;
+            font-weight: $fw-bold;
+            line-height: 1.25;
+            color: $white;
+        }
+
+        .text {
+            margin: 0;
+            font-size: $fs-14;
+            line-height: 1.8;
+            color: $white60;
+        }
+    }
+}

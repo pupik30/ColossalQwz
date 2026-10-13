@@ -1,0 +1,24 @@
+@use '../../../Styles/mixin' as *;
+@use '../../../Styles/variables' as *;
+
+.pricing {
+    @include flex-column-center;
+    gap: 24px;
+    width: 100%;
+    max-width: 1808px;
+    margin: 0 auto;
+    padding: 4rem;
+
+    .state {
+        color: $white60;
+        font-size: $fs-16;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+        width: 1024px;
+        margin-top: 40px;
+    }
+}

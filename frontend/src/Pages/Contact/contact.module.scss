@@ -1,0 +1,191 @@
+@use '../../Styles/mixin' as *;
+@use '../../Styles/variables' as *;
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    padding: 10rem 0;
+    overflow: hidden;
+
+    .inner {
+        @include flex-center-between;
+        align-items: flex-start;
+        gap: 8rem;
+        max-width: $max-width;
+        margin: 0 auto;
+        padding: 0 4rem;
+
+        @media (max-width: 1000px) {
+            flex-direction: column;
+            gap: 4rem;
+        }
+
+        .info {
+            flex: 1 1 0;
+            max-width: 46rem;
+
+            .label {
+                display: inline-block;
+                margin-bottom: 1.6rem;
+                font-size: $fs-14;
+                font-weight: $fw-semibold;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                color: $green;
+            }
+
+            .title {
+                margin-bottom: 4rem;
+                font-size: $fs-32;
+                font-weight: $fw-bold;
+                line-height: 1.25;
+                color: $white;
+            }
+
+            .contacts {
+                @include flex-column;
+                gap: 2.4rem;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                .contactItem {
+                    @include flex-center;
+                    justify-content: flex-start;
+                    gap: 1.6rem;
+
+                    .contactIcon {
+                        @include flex-center;
+                        flex-shrink: 0;
+                        width: 5.2rem;
+                        height: 5.2rem;
+                        background: $btnLight;
+                        border-radius: 0.8rem;
+
+                        img {
+                            width: 2rem;
+                            height: 2rem;
+                        }
+                    }
+
+                    .contactText {
+                        @include flex-column;
+                        gap: 0.4rem;
+
+                        .contactLabel {
+                            font-size: $fs-12;
+                            color: $white60;
+                        }
+
+                        .contactValue {
+                            font-size: $fs-14;
+                            font-weight: $fw-medium;
+                            color: $white;
+                            text-decoration: none;
+
+                            &:hover {
+                                color: $green;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .form {
+            @include flex-column;
+            gap: 2rem;
+            flex: 1 1 0;
+            max-width: 46rem;
+            width: 100%;
+            padding: 3.2rem;
+            background: $btnCard;
+            border: 1px solid rgb(255 255 255 / 6%);
+            border-radius: 0.8rem;
+
+            .row {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1.6rem;
+
+                @media (max-width: 500px) {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            .field {
+                @include flex-column;
+                gap: 0.6rem;
+                width: 100%;
+
+                .fieldLabel {
+                    font-size: $fs-12;
+                    color: $white60;
+                }
+
+                .input,
+                .textarea {
+                    width: 100%;
+                    padding: 1rem 1.2rem;
+                    font-family: inherit;
+                    font-size: $fs-14;
+                    color: $white;
+                    background: transparent;
+                    border: 1px solid rgb(255 255 255 / 12%);
+                    border-radius: 0.4rem;
+                    outline: none;
+
+                    &::placeholder {
+                        color: $white60;
+                    }
+
+                    &:focus {
+                        border-color: $purple;
+                    }
+                }
+
+                .textarea {
+                    min-height: 14rem;
+                    resize: vertical;
+                }
+            }
+
+            .btnSubmit {
+                @include flex-center;
+                width: 100%;
+                padding: 1.4rem 2.4rem;
+                font-size: $fs-14;
+                font-weight: $fw-medium;
+                color: $white;
+                background: $purple;
+                border: none;
+                border-radius: 0.4rem;
+                cursor: pointer;
+
+                &:hover:not(:disabled) {
+                    background: $purple-dark;
+                }
+
+                &:disabled {
+                    opacity: 0.6;
+                    cursor: not-allowed;
+                }
+            }
+
+            .success,
+            .error {
+                margin: 0;
+                font-size: $fs-14;
+                text-align: center;
+            }
+
+            .success {
+                color: $green;
+            }
+
+            .error {
+                color: $malina;
+            }
+        }
+    }
+}

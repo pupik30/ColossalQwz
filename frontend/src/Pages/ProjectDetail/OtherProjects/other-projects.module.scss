@@ -1,0 +1,42 @@
+@use '../../../Styles/mixin' as *;
+@use '../../../Styles/variables' as *;
+
+.other {
+    @include flex-column;
+    gap: 4rem;
+    width: 100%;
+
+    .head {
+        @include flex-column-center;
+        gap: 1.6rem;
+        text-align: center;
+
+        .label {
+            font-size: $fs-14;
+            font-weight: $fw-semibold;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: $green;
+        }
+
+        .title {
+            margin: 0;
+            font-size: $fs-24;
+            font-weight: $fw-bold;
+            color: $white;
+        }
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3.2rem;
+        width: 100%;
+        max-width: 1024px;
+        margin: 0 auto;
+
+        @media (max-width: 700px) {
+            grid-template-columns: 1fr;
+        }
+    }
+}

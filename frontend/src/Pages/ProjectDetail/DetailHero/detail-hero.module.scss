@@ -1,0 +1,150 @@
+@use '../../../Styles/mixin' as *;
+@use '../../../Styles/variables' as *;
+
+.hero {
+    @include flex-column;
+    gap: 6rem;
+    width: 100%;
+
+    .head {
+        @include flex-column-center;
+        gap: 1.6rem;
+        text-align: center;
+
+        .label {
+            font-size: $fs-14;
+            font-weight: $fw-semibold;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: $green;
+        }
+
+        .title {
+            max-width: 60rem;
+            margin: 0;
+            font-size: $fs-32;
+            font-weight: $fw-bold;
+            line-height: 1.25;
+            color: $white;
+        }
+    }
+
+    .divider {
+        width: 100%;
+        height: 1px;
+        background: rgb(255 255 255 / 8%);
+    }
+
+    .body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6rem;
+        align-items: flex-start;
+
+        @media (max-width: 900px) {
+            grid-template-columns: 1fr;
+            gap: 4rem;
+        }
+    }
+
+    .preview {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        padding: 4rem 0 0;
+        background: $cardDark;
+        border: 1px solid $btnLight;
+        border-radius: 3px;
+        overflow: hidden;
+
+        .previewInner {
+            @include flex-column;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .skeletons {
+            @include flex-column-center;
+            gap: 1.6rem;
+            width: 100%;
+
+            .skeletonLong,
+            .skeletonShort {
+                height: 2rem;
+                background: $skeleton;
+                border-radius: 100px;
+            }
+
+            .skeletonLong {
+                width: 55%;
+            }
+
+            .skeletonShort {
+                width: 30%;
+            }
+        }
+
+        .mobileSkeleton,
+        .tabletSkeleton,
+        .tableSkeleton {
+            align-self: center;
+            margin-bottom: -1px;
+            background: $skeleton;
+            border-radius: 38px 38px 0 0;
+        }
+
+        .mobileSkeleton {
+            width: 42%;
+            height: 60%;
+        }
+
+        .tabletSkeleton {
+            width: 60%;
+            height: 55%;
+        }
+
+        .tableSkeleton {
+            width: 82%;
+            height: 50%;
+        }
+    }
+
+    .info {
+        @include flex-column;
+        gap: 3.2rem;
+        padding-top: 1rem;
+
+        .description {
+            margin: 0;
+            font-size: $fs-14;
+            line-height: 1.7;
+            color: $white80;
+        }
+
+        .meta {
+            @include flex-column;
+            gap: 2rem;
+            margin: 0;
+
+            .metaItem {
+                @include flex-column;
+                gap: 0.6rem;
+
+                dt {
+                    font-size: $fs-12;
+                    font-weight: $fw-semibold;
+                    letter-spacing: 0.08em;
+                    text-transform: uppercase;
+                    color: $white60;
+                }
+
+                dd {
+                    margin: 0;
+                    font-size: $fs-14;
+                    font-weight: $fw-medium;
+                    color: $white;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+@use '../../../Styles/mixin' as *;
+@use '../../../Styles/variables' as *;
+
+.wrapper {
+    @include flex-column-center;
+    gap: 6rem;
+    width: 100%;
+    max-width: 1808px;
+    margin: 0 auto;
+    padding: 10rem 4rem;
+
+    .header {
+        @include flex-column-center;
+        gap: 1.6rem;
+        text-align: center;
+
+        .label {
+            font-size: $fs-16;
+            font-weight: $fw-semibold;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: $green;
+        }
+
+        .title {
+            max-width: 60rem;
+            font-size: $fs-32;
+            font-weight: $fw-bold;
+            line-height: 1.25;
+            color: $white;
+        }
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4.8rem 4rem;
+        width: 100%;
+        max-width: 1024px;
+
+        @media (max-width: 700px) {
+            grid-template-columns: 1fr;
+            gap: 3.2rem;
+        }
+    }
+
+    .item {
+        @include flex-column;
+        gap: 1.2rem;
+
+        .question {
+            font-size: $fs-20;
+            font-weight: $fw-bold;
+            color: $white;
+            margin: 0;
+        }
+
+        .answer {
+            margin: 0;
+            font-size: $fs-14;
+            line-height: 1.7;
+            color: $white60;
+        }
+    }
+
+    .footer {
+        margin: 0;
+        font-size: $fs-14;
+        color: $white60;
+        text-align: center;
+
+        .link {
+            color: $purple;
+            text-decoration: underline;
+
+            &:hover {
+                color: $purple-dark;
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+@use '../../Styles/mixin' as *;
+@use '../../Styles/variables' as *;
+
+.btn {
+    background-color: var(--bg-color, $btnLight);
+    color: var(--text-color, #ffffff);
+    padding: 1rem 4rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    flex-shrink: 0;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &.purple {
+        background-color: var(--bg-color, $purple);
+    }
+
+    &.border {
+        border: 1px solid $white;
+        border-radius: 100px;
+        background: none;
+    }
+
+    &.white {
+        background: $white;
+        color: $purple-dark;
+    }
+}

@@ -1,0 +1,60 @@
+@use '../../../Styles/mixin' as *;
+@use '../../../Styles/variables' as *;
+
+.item {
+    display: grid;
+    grid-template-columns: 4.8rem 1fr;
+    gap: 1.6rem;
+    align-items: flex-start;
+    padding-bottom: 3.2rem;
+    border-bottom: 1px solid rgb(255 255 255 / 6%);
+
+    &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .avatar {
+        width: 4.8rem;
+        height: 4.8rem;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .body {
+        @include flex-column;
+        gap: 0.8rem;
+    }
+
+    .head {
+        @include flex-center;
+        justify-content: flex-start;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .name {
+        margin: 0;
+        font-size: $fs-16;
+        font-weight: $fw-bold;
+        color: $white;
+    }
+
+    .role {
+        font-size: $fs-12;
+        color: $white60;
+    }
+
+    .time {
+        font-size: $fs-12;
+        color: $white60;
+        margin-left: auto;
+    }
+
+    .text {
+        margin: 0;
+        font-size: $fs-14;
+        line-height: 1.7;
+        color: $white80;
+    }
+}

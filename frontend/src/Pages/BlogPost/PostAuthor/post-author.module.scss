@@ -1,0 +1,66 @@
+@use '../../../Styles/mixin' as *;
+@use '../../../Styles/variables' as *;
+
+.author {
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    gap: 2.4rem;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 68rem;
+    padding: 3.2rem;
+    background: $btnCard;
+    border: 1px solid rgb(255 255 255 / 6%);
+    border-radius: 1.2rem;
+
+    .avatar {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .info {
+        @include flex-column;
+        gap: 1.6rem;
+    }
+
+    .head {
+        @include flex-center-between;
+        gap: 2rem;
+    }
+
+    .name {
+        margin: 0;
+        font-size: $fs-18;
+        font-weight: $fw-bold;
+        color: $white;
+    }
+
+    .role {
+        font-size: $fs-12;
+        color: $white60;
+    }
+
+    .socials {
+        @include flex-center;
+        gap: 1rem;
+
+        a {
+            font-size: $fs-14;
+            color: $white60;
+            text-decoration: none;
+
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+
+    .text {
+        margin: 0;
+        font-size: $fs-14;
+        line-height: 1.7;
+        color: $white60;
+    }
+}

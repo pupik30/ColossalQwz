@@ -1,0 +1,45 @@
+@use '../../../Styles/mixin' as *;
+@use '../../../Styles/variables' as *;
+
+.hero {
+    width: 100%;
+    @include flex-center;
+
+    .container {
+        width: 100%;
+        max-width: 601px;
+        @include flex-column-center;
+        gap: 3rem;
+
+        .eyebrown {
+            font-size: $fs-16;
+            font-weight: $fw-semibold;
+            color: $green;
+        }
+
+        .aboutUsText {
+            @include flex-column-center;
+            gap: 2rem;
+
+            .title {
+                text-align: center;
+                font-size: $fs-36;
+                font-weight: $fw-bold;
+                line-height: 1.54;
+            }
+
+            .description {
+                text-align: center;
+                font-size: $fs-16;
+                font-weight: $fw-medium;
+                color: $white60;
+                line-height: 1.9;
+            }
+        }
+
+        .btnHero {
+            width: 60%;
+            @include flex-center-between;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@use '../../../Styles/mixin' as *;
+@use '../../../Styles/variables' as *;
+
+.ourTeam {
+    width: 100%;
+    max-width: 1035px;
+    @include flex-center-between;
+    margin-bottom: 6rem;
+    border-bottom: 2px solid $btnLight;
+
+    .infoWork {
+        @include flex-column;
+        gap: 2rem;
+
+        .eyebrown {
+            color: $green;
+            font-size: $fs-16;
+            font-weight: $fw-semibold;
+        }
+
+        .title {
+            font-size: $fs-30;
+            font-weight: $fw-bold;
+        }
+
+        .description {
+            font-size: $fs-16;
+            font-weight: $fw-medium;
+            color: $white60;
+            line-height: 1.8;
+        }
+    }
+
+    img {
+        width: 605px;
+        height: 549px;
+    }
+}

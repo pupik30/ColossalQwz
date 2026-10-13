@@ -1,0 +1,66 @@
+@use '../../../Styles/mixin' as *;
+@use '../../../Styles/variables' as *;
+
+.card {
+    @include flex-column;
+    gap: 1.6rem;
+
+    .coverWrap {
+        width: 100%;
+        border-radius: 0.8rem;
+
+        .cover {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .title {
+        margin: 0;
+        font-size: $fs-18;
+        font-weight: $fw-bold;
+        line-height: 1.35;
+        color: $white;
+    }
+
+    .excerpt {
+        margin: 0;
+        font-size: $fs-14;
+        line-height: 1.6;
+        color: $white60;
+    }
+
+    .author {
+        @include flex-center;
+        justify-content: flex-start;
+        gap: 1.2rem;
+        margin-top: auto;
+        padding-top: 1.6rem;
+
+        .authorAvatar {
+            width: 3.6rem;
+            height: 3.6rem;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .authorInfo {
+            @include flex-column;
+            gap: 0.2rem;
+
+            .authorName {
+                font-size: $fs-14;
+                font-weight: $fw-semibold;
+                color: $white;
+            }
+
+            .meta {
+                font-size: $fs-12;
+                color: $white60;
+            }
+        }
+    }
+}
